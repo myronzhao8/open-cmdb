@@ -1,0 +1,21 @@
+{
+    "name": "Python 3.6 & Node.js 10 Dev Container",
+    "image": "python:3.6", // 使用Python 3.6镜像作为基础
+    "features": {
+        "node": "10" // 指定Node.js的版本
+    },
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.python",
+        "dbaeumer.vscode-eslint"
+    ],
+    "forwardPorts": [],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": "echo 'Container ready!'",
+    "remoteUser": "root"
+}
+
